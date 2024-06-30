@@ -1,0 +1,1093 @@
+{
+	"info": {
+		"_postman_id": "19b12116-0c5d-471f-9aab-f49767775d48",
+		"name": "insurance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3753540",
+		"_collection_link": "https://gold-shadow-454475.postman.co/workspace/devsankalp~6c69a441-472a-4209-ac5b-2803689f9a3e/collection/3753540-19b12116-0c5d-471f-9aab-f49767775d48?action=share&source=collection_link&creator=3753540"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"phone\": \"+917984787912\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP of Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"password\": \"Pankaj@123\",\n        \"role\":\"user\",\n        \"email\":\"maulikm+1@gmail.com\",\n        \"name\":\"Pankaj+1\",\n        \"username\":\"maulikm+2\",\n        \"phone\":\"+917984787912\",\n        \"code\":\"787878\",\n        \"type\":\"signup\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/verifyOTP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();",
+									"postman.setEnvironmentVariable(\"token\", res.token);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"Pankaj@007\", \n    \"email\":\"pankaj+1@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzBhMjRlZjg1YjQ1MWVhMTc1NGY0ZiIsImlhdCI6MTY4NTEwMzMwMX0.ZDyC_XjHZPl5874W5VsHNqlImgPJ6qRjOatYHCsq4OI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"maulikm@gmail.com\",\n    \"phone\":\"+917984787912\",\n    \"oldPassword\":\"Pankaj@123\",\n    \"newPassword\":\"Maulik@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP Of Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"+917984787912\",\n    \"newPassword\":\"Maulik@123\",\n    \"code\":\"216054\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/verifyOTP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"phone\": \"+917984787912\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP Of Forgot Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzBhMjRlZjg1YjQ1MWVhMTc1NGY0ZiIsImlhdCI6MTY4NTEwMzMwMX0.ZDyC_XjHZPl5874W5VsHNqlImgPJ6qRjOatYHCsq4OI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"phone\": \"+917984787912\",\n        \"code\":\"411407\",\n        \"newPassword\":\"Pankaj@123\",\n        \"type\":\"forgotPassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/verifyOTP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmM5ZDExOTkxNDlkMjUxYWQ2MjlmZCIsImlhdCI6MTY4NTA4MzI0MX0.Eo0lk9jI2HADrf6IbvbhEHzy2tKf60hevZ5zDkE2Tv8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Type",
+			"item": [
+				{
+					"name": "Type get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzcwYWQwOGNiYjE5NzIyYTdiODRlMSIsImlhdCI6MTY4NTUzNTY5NH0.0EHgX07pwaMeH3wOor-ahmDcPyb0dw9Eyr_N8USkjbw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Three\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"64770d98aee11082cf7a46e7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Type",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Four\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/type?id=64770ad08cbb19722a7b84da",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"type"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64770ad08cbb19722a7b84da"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Category get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"abcd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"efgh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category?id=647728fd0a64daf0903ea098",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "647728fd0a64daf0903ea098"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"647728fd0a64daf0903ea098\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productDetail\":{\n        \"name\":\"Yamaha\",\n        \"startType\":\"self\",\n        \"engineCapacity\":\"150CC\",\n        \"tankCapacity\":\"10L\",\n        \"noOfGears\":5,\n        \"gearType\":\"manual\",\n        \"breakType\":\"disc\",\n        \"wheelType\":\"mac\",\n        \"color\":\"green\",\n        \"mileage\":50,\n        \"make\":\"Yamaha\",\n        \"model\":\"crux\",\n        \"price\":60000\n    },\n    \"category\":\"64770ad08cbb19722a7b84dd\",\n    \"type\":\"64770ad08cbb19722a7b84d9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "scheme",
+			"item": [
+				{
+					"name": "get all scheme",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/scheme",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"scheme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get scheme by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/scheme/65211b015e194adb8aa553f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"scheme",
+								"65211b015e194adb8aa553f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete scheme",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"65212422ae7eb4559f36b0b5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/scheme",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"scheme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateScheme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test111\",\n    \"company_name\":\"Test111\",\n    \"premium_paying_term\":\"test11\",\n    \"area_manager\":\"test11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/scheme/65212422ae7eb4559f36b0b5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"scheme",
+								"65212422ae7eb4559f36b0b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create scheme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test\",\n    \"company_name\":\"Test\",\n    \"premium_paying_term\":\"test\",\n    \"area_manager\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/scheme/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"scheme",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "premium",
+			"item": [
+				{
+					"name": "get all premium",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/premium",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"premium"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get premium by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/premium/65211b015e194adb8aa553f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"premium",
+								"65211b015e194adb8aa553f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete premium",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"65212422ae7eb4559f36b0b5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/premium",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"premium"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update premium",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test111\",\n    \"company_name\":\"Test111\",\n    \"premium_paying_term\":\"test11\",\n    \"area_manager\":\"test11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/premium/65212422ae7eb4559f36b0b5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"premium",
+								"65212422ae7eb4559f36b0b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create premium",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test\",\n    \"company_name\":\"Test\",\n    \"premium_paying_term\":\"test\",\n    \"area_manager\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/premium/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"premium",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "policy",
+			"item": [
+				{
+					"name": "get all policy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NzUzNjQ1fQ.K2Lh46RXMQOCkdrRnYiIwtSUJEoyIzjpp9dQo_OgEMU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/policy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get policy by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/policy/65226b9e740d967b8f6b55fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policy",
+								"65226b9e740d967b8f6b55fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete policy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"65212422ae7eb4559f36b0b5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/policy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update policy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test111\",\n    \"company_name\":\"Test111\",\n    \"premium_paying_term\":\"test11\",\n    \"area_manager\":\"test11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/policy/65212422ae7eb4559f36b0b5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policy",
+								"65212422ae7eb4559f36b0b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create policy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjBmMmVkN2ZjZGM4NDEwNThiNWViOCIsInJvbGUiOiJzdXBlckFkbWluIiwiaWF0IjoxNjk2NjcxMDQ0fQ.BYtdbYR7bNoY4dJ9vnS4va6ZTqMvtbK3BSMjlyxqEw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test\",\n    \"company_name\":\"Test\",\n    \"premium_paying_term\":\"test\",\n    \"area_manager\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/policy/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policy",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
