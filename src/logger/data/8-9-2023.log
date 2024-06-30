@@ -1,0 +1,13 @@
+{
+  level: 'error',
+  message: 'Do not know how to serialize a BigInt',
+  error: TypeError: Do not know how to serialize a BigInt
+      at JSON.stringify (<anonymous>)
+      at stringify (/Users/admin/Documents/Maulik/product_inquiry/node_modules/express/lib/response.js:1150:12)
+      at ServerResponse.json (/Users/admin/Documents/Maulik/product_inquiry/node_modules/express/lib/response.js:271:14)
+      at ServerResponse.send (/Users/admin/Documents/Maulik/product_inquiry/node_modules/express/lib/response.js:162:21)
+      at /Users/admin/Documents/Maulik/product_inquiry/src/controllers/policy.controller.js:35:32
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5),
+  label: 'right meow!',
+  timestamp: '2023-10-08T08:57:12.677Z'
+}

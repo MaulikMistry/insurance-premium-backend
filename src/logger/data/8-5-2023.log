@@ -1,0 +1,103 @@
+{
+  level: 'error',
+  error: Error: products validation failed: updatedBy: Path `updatedBy` is required., createdBy: Path `createdBy` is required.
+      at ValidationError.inspect (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/error/validation.js:50:26)
+      at formatValue (node:internal/util/inspect:806:19)
+      at formatProperty (node:internal/util/inspect:1939:11)
+      at formatRaw (node:internal/util/inspect:1055:9)
+      at formatValue (node:internal/util/inspect:841:10)
+      at inspect (node:internal/util/inspect:365:10)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/pretty-print.js:27:19)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/combine.js:20:24)
+      at DerivedLogger._transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/winston/lib/winston/logger.js:313:29)
+      at DerivedLogger.Transform._read (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/readable-stream/lib/_stream_transform.js:166:10) {
+    errors: {
+      updatedBy: ValidatorError: Path `updatedBy` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `updatedBy` is required.',
+          type: 'required',
+          path: 'updatedBy',
+          value: undefined
+        },
+        kind: 'required',
+        path: 'updatedBy',
+        value: undefined,
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      createdBy: ValidatorError: Path `createdBy` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `createdBy` is required.',
+          type: 'required',
+          path: 'createdBy',
+          value: undefined
+        },
+        kind: 'required',
+        path: 'createdBy',
+        value: undefined,
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      }
+    },
+    _message: 'products validation failed'
+  },
+  message: 'products validation failed: updatedBy: Path `updatedBy` is required., createdBy: Path `createdBy` is required.',
+  label: 'right meow!',
+  timestamp: '2023-06-08T08:38:24.030Z'
+}
+{
+  level: 'error',
+  error: MongoServerError: E11000 duplicate key error collection: product_inquiry.products index: productDetail.name_1 dup key: { productDetail.name: "Yamaha" }
+      at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/operations/insert.js:50:33
+      at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/connection_pool.js:331:21
+      at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/sdam/server.js:207:17
+      at handleOperationResult (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/sdam/server.js:323:20)
+      at Connection.onMessage (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/connection.js:206:9)
+      at MessageStream.<anonymous> (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/connection.js:61:60)
+      at MessageStream.emit (node:events:513:28)
+      at processIncomingData (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/message_stream.js:124:16)
+      at MessageStream._write (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/message_stream.js:33:9)
+      at writeOrBuffer (node:internal/streams/writable:391:12) {
+    index: 0,
+    code: 11000,
+    keyPattern: { 'productDetail.name': 1 },
+    keyValue: { 'productDetail.name': 'Yamaha' },
+    [Symbol(errorLabels)]: Set(0) {}
+  },
+  message: 'E11000 duplicate key error collection: product_inquiry.products index: productDetail.name_1 dup key: { productDetail.name: "Yamaha" }',
+  label: 'right meow!',
+  timestamp: '2023-06-08T08:39:00.664Z'
+}
+{
+  level: 'error',
+  error: MongoServerError: E11000 duplicate key error collection: product_inquiry.products index: productDetail.name_1 dup key: { productDetail.name: "Yamaha2" }
+      at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/operations/insert.js:50:33
+      at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/connection_pool.js:331:21
+      at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/sdam/server.js:207:17
+      at handleOperationResult (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/sdam/server.js:323:20)
+      at Connection.onMessage (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/connection.js:206:9)
+      at MessageStream.<anonymous> (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/connection.js:61:60)
+      at MessageStream.emit (node:events:513:28)
+      at processIncomingData (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/message_stream.js:124:16)
+      at MessageStream._write (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongodb/lib/cmap/message_stream.js:33:9)
+      at writeOrBuffer (node:internal/streams/writable:391:12) {
+    index: 0,
+    code: 11000,
+    keyPattern: { 'productDetail.name': 1 },
+    keyValue: { 'productDetail.name': 'Yamaha2' },
+    [Symbol(errorLabels)]: Set(0) {}
+  },
+  message: 'E11000 duplicate key error collection: product_inquiry.products index: productDetail.name_1 dup key: { productDetail.name: "Yamaha2" }',
+  label: 'right meow!',
+  timestamp: '2023-06-08T09:15:33.518Z'
+}

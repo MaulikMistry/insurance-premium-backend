@@ -1,0 +1,390 @@
+{
+  level: 'error',
+  error: Error: products validation failed: productDetail.price: Path `productDetail.price` is required., productDetail.model: Path `productDetail.model` is required., productDetail.make: Path `productDetail.make` is required., productDetail.mileage: Path `productDetail.mileage` is required., productDetail.color: Path `productDetail.color` is required., productDetail.wheelType: Path `productDetail.wheelType` is required., productDetail.breakType: Path `productDetail.breakType` is required., productDetail.gearType: Path `productDetail.gearType` is required., productDetail.noOfGears: Path `productDetail.noOfGears` is required., productDetail.tankCapacity: Path `productDetail.tankCapacity` is required., productDetail.engineCapacity: Path `productDetail.engineCapacity` is required., productDetail.startType: Path `productDetail.startType` is required., productDetail.name: Path `productDetail.name` is required., category: Path `category` is required., type: Path `type` is required.
+      at ValidationError.inspect (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/error/validation.js:50:26)
+      at formatValue (node:internal/util/inspect:806:19)
+      at formatProperty (node:internal/util/inspect:1939:11)
+      at formatRaw (node:internal/util/inspect:1055:9)
+      at formatValue (node:internal/util/inspect:841:10)
+      at inspect (node:internal/util/inspect:365:10)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/pretty-print.js:27:19)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/combine.js:20:24)
+      at DerivedLogger._transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/winston/lib/winston/logger.js:313:29)
+      at DerivedLogger.Transform._read (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/readable-stream/lib/_stream_transform.js:166:10) {
+    errors: {
+      'productDetail.price': ValidatorError: Path `productDetail.price` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaNumber.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.price` is required.',
+          type: 'required',
+          path: 'productDetail.price',
+          value: null
+        },
+        kind: 'required',
+        path: 'productDetail.price',
+        value: null,
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.model': ValidatorError: Path `productDetail.model` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.model` is required.',
+          type: 'required',
+          path: 'productDetail.model',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.model',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.make': ValidatorError: Path `productDetail.make` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.make` is required.',
+          type: 'required',
+          path: 'productDetail.make',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.make',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.mileage': ValidatorError: Path `productDetail.mileage` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaNumber.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.mileage` is required.',
+          type: 'required',
+          path: 'productDetail.mileage',
+          value: null
+        },
+        kind: 'required',
+        path: 'productDetail.mileage',
+        value: null,
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.color': ValidatorError: Path `productDetail.color` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.color` is required.',
+          type: 'required',
+          path: 'productDetail.color',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.color',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.wheelType': ValidatorError: Path `productDetail.wheelType` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.wheelType` is required.',
+          type: 'required',
+          path: 'productDetail.wheelType',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.wheelType',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.breakType': ValidatorError: Path `productDetail.breakType` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.breakType` is required.',
+          type: 'required',
+          path: 'productDetail.breakType',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.breakType',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.gearType': ValidatorError: Path `productDetail.gearType` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.gearType` is required.',
+          type: 'required',
+          path: 'productDetail.gearType',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.gearType',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.noOfGears': ValidatorError: Path `productDetail.noOfGears` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaNumber.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.noOfGears` is required.',
+          type: 'required',
+          path: 'productDetail.noOfGears',
+          value: null
+        },
+        kind: 'required',
+        path: 'productDetail.noOfGears',
+        value: null,
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.tankCapacity': ValidatorError: Path `productDetail.tankCapacity` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.tankCapacity` is required.',
+          type: 'required',
+          path: 'productDetail.tankCapacity',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.tankCapacity',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.engineCapacity': ValidatorError: Path `productDetail.engineCapacity` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.engineCapacity` is required.',
+          type: 'required',
+          path: 'productDetail.engineCapacity',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.engineCapacity',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.startType': ValidatorError: Path `productDetail.startType` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.startType` is required.',
+          type: 'required',
+          path: 'productDetail.startType',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.startType',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.name': ValidatorError: Path `productDetail.name` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `productDetail.name` is required.',
+          type: 'required',
+          path: 'productDetail.name',
+          value: ''
+        },
+        kind: 'required',
+        path: 'productDetail.name',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      category: ValidatorError: Path `category` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `category` is required.',
+          type: 'required',
+          path: 'category',
+          value: ''
+        },
+        kind: 'required',
+        path: 'category',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      type: ValidatorError: Path `type` is required.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `type` is required.',
+          type: 'required',
+          path: 'type',
+          value: ''
+        },
+        kind: 'required',
+        path: 'type',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      }
+    },
+    _message: 'products validation failed'
+  },
+  message: 'products validation failed: productDetail.price: Path `productDetail.price` is required., productDetail.model: Path `productDetail.model` is required., productDetail.make: Path `productDetail.make` is required., productDetail.mileage: Path `productDetail.mileage` is required., productDetail.color: Path `productDetail.color` is required., productDetail.wheelType: Path `productDetail.wheelType` is required., productDetail.breakType: Path `productDetail.breakType` is required., productDetail.gearType: Path `productDetail.gearType` is required., productDetail.noOfGears: Path `productDetail.noOfGears` is required., productDetail.tankCapacity: Path `productDetail.tankCapacity` is required., productDetail.engineCapacity: Path `productDetail.engineCapacity` is required., productDetail.startType: Path `productDetail.startType` is required., productDetail.name: Path `productDetail.name` is required., category: Path `category` is required., type: Path `type` is required.',
+  label: 'right meow!',
+  timestamp: '2023-06-01T05:03:46.801Z'
+}
+{
+  level: 'error',
+  error: Error: products validation failed: productDetail.wheelType: `mac` is not a valid enum value for path `productDetail.wheelType`., productDetail.gearType: `Manual` is not a valid enum value for path `productDetail.gearType`.
+      at ValidationError.inspect (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/error/validation.js:50:26)
+      at formatValue (node:internal/util/inspect:806:19)
+      at formatProperty (node:internal/util/inspect:1939:11)
+      at formatRaw (node:internal/util/inspect:1055:9)
+      at formatValue (node:internal/util/inspect:841:10)
+      at inspect (node:internal/util/inspect:365:10)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/pretty-print.js:27:19)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/combine.js:20:24)
+      at DerivedLogger._transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/winston/lib/winston/logger.js:313:29)
+      at DerivedLogger.Transform._read (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/readable-stream/lib/_stream_transform.js:166:10) {
+    errors: {
+      'productDetail.wheelType': ValidatorError: `mac` is not a valid enum value for path `productDetail.wheelType`.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: '`mac` is not a valid enum value for path `productDetail.wheelType`.',
+          type: 'enum',
+          enumValues: [ 'Alloy', 'oil', 'normal' ],
+          path: 'productDetail.wheelType',
+          value: 'mac'
+        },
+        kind: 'enum',
+        path: 'productDetail.wheelType',
+        value: 'mac',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      },
+      'productDetail.gearType': ValidatorError: `Manual` is not a valid enum value for path `productDetail.gearType`.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: '`Manual` is not a valid enum value for path `productDetail.gearType`.',
+          type: 'enum',
+          enumValues: [ 'automatic', 'manual' ],
+          path: 'productDetail.gearType',
+          value: 'Manual'
+        },
+        kind: 'enum',
+        path: 'productDetail.gearType',
+        value: 'Manual',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      }
+    },
+    _message: 'products validation failed'
+  },
+  message: 'products validation failed: productDetail.wheelType: `mac` is not a valid enum value for path `productDetail.wheelType`., productDetail.gearType: `Manual` is not a valid enum value for path `productDetail.gearType`.',
+  label: 'right meow!',
+  timestamp: '2023-06-01T05:07:27.003Z'
+}
+{
+  level: 'error',
+  error: Error: products validation failed: productDetail.gearType: `Manual` is not a valid enum value for path `productDetail.gearType`.
+      at ValidationError.inspect (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/error/validation.js:50:26)
+      at formatValue (node:internal/util/inspect:806:19)
+      at formatProperty (node:internal/util/inspect:1939:11)
+      at formatRaw (node:internal/util/inspect:1055:9)
+      at formatValue (node:internal/util/inspect:841:10)
+      at inspect (node:internal/util/inspect:365:10)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/pretty-print.js:27:19)
+      at Format.transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/logform/combine.js:20:24)
+      at DerivedLogger._transform (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/winston/lib/winston/logger.js:313:29)
+      at DerivedLogger.Transform._read (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/readable-stream/lib/_stream_transform.js:166:10) {
+    errors: {
+      'productDetail.gearType': ValidatorError: `Manual` is not a valid enum value for path `productDetail.gearType`.
+          at validate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1349:13)
+          at SchemaString.SchemaType.doValidate (/var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/schematype.js:1333:7)
+          at /var/www/html/Pankaj/NODE/Product Inquiry/product_inquiry/node_modules/mongoose/lib/document.js:2932:18
+          at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: '`Manual` is not a valid enum value for path `productDetail.gearType`.',
+          type: 'enum',
+          enumValues: [ 'automatic', 'manual' ],
+          path: 'productDetail.gearType',
+          value: 'Manual'
+        },
+        kind: 'enum',
+        path: 'productDetail.gearType',
+        value: 'Manual',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      }
+    },
+    _message: 'products validation failed'
+  },
+  message: 'products validation failed: productDetail.gearType: `Manual` is not a valid enum value for path `productDetail.gearType`.',
+  label: 'right meow!',
+  timestamp: '2023-06-01T05:08:32.817Z'
+}

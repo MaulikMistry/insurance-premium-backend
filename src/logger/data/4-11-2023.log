@@ -1,0 +1,36 @@
+{
+  level: 'error',
+  message: 'Cannot populate path `scheme_id` because it is not in your schema. Set the `strictPopulate` option to false to override.',
+  error: StrictPopulateError: Cannot populate path `scheme_id` because it is not in your schema. Set the `strictPopulate` option to false to override.
+      at getModelsMapForPopulate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:49:12)
+      at populate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4354:21)
+      at _populate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4314:5)
+      at /Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4286:5
+      at new Promise (<anonymous>)
+      at Function.populate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4285:10)
+      at model.Query._find (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/query.js:2316:20)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async model.Query.exec (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/query.js:4430:11) {
+    path: 'scheme_id'
+  },
+  label: 'right meow!',
+  timestamp: '2023-12-03T20:20:50.549Z'
+}
+{
+  level: 'error',
+  message: 'Cannot populate path `scheme_id` because it is not in your schema. Set the `strictPopulate` option to false to override.',
+  error: StrictPopulateError: Cannot populate path `scheme_id` because it is not in your schema. Set the `strictPopulate` option to false to override.
+      at getModelsMapForPopulate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:49:12)
+      at populate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4354:21)
+      at _populate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4314:5)
+      at /Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4286:5
+      at new Promise (<anonymous>)
+      at Function.populate (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/model.js:4285:10)
+      at model.Query._find (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/query.js:2316:20)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async model.Query.exec (/Users/admin/Documents/Maulik/insurance/product_inquiry/node_modules/mongoose/lib/query.js:4430:11) {
+    path: 'scheme_id'
+  },
+  label: 'right meow!',
+  timestamp: '2023-12-03T20:23:10.575Z'
+}
